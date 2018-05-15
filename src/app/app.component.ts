@@ -5,6 +5,30 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app';
+  contact: any;
+  contacts: any[] = [];
+  appName = 'Address Book';
+
+  constuctor(){
+    this.initContact
+  }
+
+  createContact(){
+    console.log('Submit button was clicked')
+    this.contacts.push(this.contact);
+    this.initContact
+  }
+  private initContact(){
+    this.contact = {
+      name = '',
+      email = '',
+      company = '',
+      role = '',
+      twitter = '',
+      location = '',
+      notes = ''
+    }
+  }
 }
